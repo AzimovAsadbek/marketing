@@ -128,7 +128,7 @@ const IconWrapper = styled.div`
   align-items: center;
 
   img {
-    width: ${({ size }) => console.log(size) || getValue(size, "18px")};
+    width: ${({ size }) => getValue(size, "18px")};
     height: ${({ size }) => getValue(size, "18px")};
     fill: white;
   }

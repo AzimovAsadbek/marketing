@@ -21,7 +21,7 @@ const Container = styled.div`
   padding-right: ${({ pr }) => getValue(pr)};
   padding-left: ${({ pl }) => getValue(pl)};
 
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 `;
 
 export { Container };

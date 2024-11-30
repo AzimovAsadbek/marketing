@@ -21,8 +21,18 @@ import { useState } from "react";
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [posX, setPosX] = useState(0);
+  const [posY, setPosY] = useState(0);
   return (
-    <Wrapper>
+    <Wrapper
+      onMouseMove={(e) => {
+        setPosX(e.clientX);
+        setPosY(e.clientY);
+      }}
+      posx={posX}
+      posy={posY}
+    >
+      <div className="autline-cursor"></div>
       <NavWrapper>
         <Section>
           <Logo onClick={() => navigate("/home")}>Panda</Logo>

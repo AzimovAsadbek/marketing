@@ -5,14 +5,19 @@ import image from "../../assets/icons/wave.svg";
 import {
   BackgroundImage,
   CardContainer,
+  ChildContainer,
   Container,
   GreyWrap,
   MarketingWrap,
+  ReadButton,
+  SolutionContainer,
   TitleStyle,
   VideoBackground,
 } from "./style";
 import Card from "../Card";
 import cardInfo from "../../utils/cardInfo";
+import Future from "../Future";
+import Carusel from "../Carusel";
 
 const Home = () => {
   return (
@@ -44,6 +49,47 @@ const Home = () => {
           );
         })}
       </CardContainer>
+
+      <Future />
+
+      <SolutionContainer>
+        <ChildContainer>
+          <SubTitle size={14} fw={500}>
+            PERFECT SOLUTIONS
+          </SubTitle>
+          <br />
+          <SubTitle size="46px" fw={600}>
+            Check Our Flexible <br />
+            <br />
+            Clients Plans
+          </SubTitle>
+        </ChildContainer>
+
+        <ChildContainer>
+          <br />
+          <br />
+          <SubTitle size={17} color={"var(--secondaryColor)"}>
+            We perform full analysis of the client’s website and collect
+            information about the competitors to formulate a proper strategy.
+          </SubTitle>
+          <br />
+          <br />
+          <SubTitle size={17} color={"var(--secondaryColor)"}>
+            There is no one universal solution in online marketing, that’s why
+            every time we create a unique strategy tailored to the customer’s
+            needs.
+          </SubTitle>
+
+          <br />
+          <br />
+          <br />
+          <ReadButton>
+            <SubTitle fw={600}>Read More</SubTitle>
+          </ReadButton>
+        </ChildContainer>
+      </SolutionContainer>
+
+      <Carusel />
     </Container>
   );
 };

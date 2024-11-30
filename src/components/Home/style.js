@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* gap: 50px; */
 `;
 
 const VideoBackground = styled.div`
@@ -89,7 +90,7 @@ const CardContainer = styled.div`
   gap: 10px;
   margin: 0 180px;
 
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); // Hoverda shaklni o'zgartirish
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 `;
 
 const IconWrapper = styled.div`
@@ -133,6 +134,45 @@ const ArrowIcon = styled.div`
   align-items: center;
 `;
 
+const SolutionContainer = styled.div`
+  display: flex;
+  margin-top: 120px;
+  padding: 10px;
+  max-width: 1290px;
+`;
+
+const ChildContainer = styled.div`
+  width: 630px;
+`;
+
+const ReadButton = styled.div`
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 14.5%;
+    height: 2px;
+    background-color: var(--primaryColor);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 0;
+  }
+`;
+
 export {
   Container,
   VideoBackground,
@@ -147,4 +187,7 @@ export {
   Text,
   ArrowIcon,
   Content,
+  ChildContainer,
+  SolutionContainer,
+  ReadButton,
 };

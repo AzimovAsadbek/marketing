@@ -4,6 +4,20 @@ import { NavLink } from "react-router-dom";
 const Wrapper = styled.div`
   width: 100%;
   background-color: var(--bgColor);
+  .autline-cursor {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background-color: black;
+    position: fixed;
+    top: ${({ posy }) => posy + 20 + "px"};
+    left: ${({ posx }) => posx + 20 + "px"};
+    /* transform: translate(-50%, -50%); */
+    border-radius: 50%;
+    z-index: 5;
+    pointer-events: none;
+    transition: top 0.2s ease, left 0.1s ease;
+  }
 `;
 
 const NavWrapper = styled.div`
