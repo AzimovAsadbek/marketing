@@ -28,6 +28,7 @@ const Container = styled.button`
   padding: ${({ padding }) => getValue(padding, "5px")};
   width: fit-content;
   flex-wrap: nowrap;
+  height: 55px;
 `;
 
 const Counter = styled.div`

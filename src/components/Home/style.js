@@ -142,6 +142,7 @@ const SolutionContainer = styled.div`
 `;
 
 const ChildContainer = styled.div`
+  /* display: flex; */
   width: 630px;
 `;
 
@@ -174,6 +175,22 @@ const ReadButton = styled.div`
   }
 `;
 
+const Input = styled.input`
+  width: 100%;
+  border-radius: 30px;
+  height: 55px;
+  /* padding: 10px; */
+  padding-left: 18px;
+  border: 1px solid black;
+`;
+
+const Con = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 630px;
+  gap: 10px;
+`;
+
 export {
   Container,
   VideoBackground,
@@ -191,4 +208,6 @@ export {
   ChildContainer,
   SolutionContainer,
   ReadButton,
+  Input,
+  Con,
 };

@@ -6,8 +6,10 @@ import {
   BackgroundImage,
   CardContainer,
   ChildContainer,
+  Con,
   Container,
   GreyWrap,
+  Input,
   MarketingWrap,
   ReadButton,
   SolutionContainer,
@@ -90,6 +92,35 @@ const Home = () => {
       </SolutionContainer>
 
       <Carusel />
+
+      <SolutionContainer>
+        <ChildContainer>
+          <SubTitle size="46px" fw={600}>
+            Subscribe to the <br />
+            <br /> Exclusive Updates!
+          </SubTitle>
+        </ChildContainer>
+        <ChildContainer>
+          <Con>
+            <Input placeholder="Enter Your email address" />
+            <Button
+              onClick={() => navigate("/contacts")}
+              padding={"9px 40px"}
+              bgcolor="#ff2e57"
+              color={"white"}
+            >
+              Subscribe
+            </Button>
+          </Con>
+          <SubTitle mt={10}>
+            <input type="checkbox" />
+            <SubTitle pl={10}>
+              I agree to the <a href=""> Privacy Policy.</a>
+            </SubTitle>
+          </SubTitle>
+        </ChildContainer>
+      </SolutionContainer>
+      <Future creative="true" />
     </Container>
   );
 };
