@@ -152,6 +152,7 @@ const ReadButton = styled.div`
   font-size: 18px;
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  width: fit-content;
 
   &:hover {
     transform: scale(1);
@@ -162,7 +163,7 @@ const ReadButton = styled.div`
     position: absolute;
     bottom: -5px;
     left: 0;
-    width: 14.5%;
+    width: 100%;
     height: 2px;
     background-color: var(--primaryColor);
     transition: width 0.3s ease;

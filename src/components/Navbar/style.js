@@ -5,14 +5,14 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: var(--bgColor);
   .autline-cursor {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border: 1px solid black;
     background-color: black;
     position: fixed;
     top: ${({ posy }) => posy + 20 + "px"};
     left: ${({ posx }) => posx + 20 + "px"};
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 5;
     pointer-events: none;
@@ -50,6 +50,7 @@ const NavItem = styled(NavLink)`
   font-size: 18px;
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  width: fit-content;
 
   &:hover {
     transform: scale(1);
@@ -63,7 +64,7 @@ const NavItem = styled(NavLink)`
     width: ${({ active }) => (active ? "100%" : "0%")};
     height: 2px;
     background-color: white;
-    transition: width 0.3s ease;
+    transition: width 0.5s ease;
   }
 
   &:hover::after {
@@ -99,6 +100,7 @@ const Dropdown = styled.div`
 
 const DropdownItem = styled(NavLink)`
   position: relative;
+  width: fit-content;
   padding: 8px 0;
   color: white;
   font-size: 16px;
@@ -114,14 +116,14 @@ const DropdownItem = styled(NavLink)`
     content: "";
     position: absolute;
     left: 0;
-    width: ${({ active }) => (active ? "70%" : "0%")};
+    width: ${({ active }) => (active ? "100%" : "0%")};
     height: 2px;
     background-color: white;
     transition: width 0.3s ease;
   }
 
   &:hover::after {
-    width: 70%;
+    width: 100%;
   }
 `;
 
